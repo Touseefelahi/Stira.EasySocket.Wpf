@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Stira.EasySocket.Views.Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid  VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="IP" Grid.Row="0" />
+        <TextBox Text="{Binding Mcu.IP}"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" MinWidth="90" />
+
+        <TextBlock Text="Port UDP" Grid.Row="1" />
+        <TextBox Text="{Binding Mcu.PortUdp}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" MinWidth="40" />
+
+        <TextBlock Text="Port TCP" Grid.Row="2" />
+        <TextBox Text="{Binding Mcu.PortTcp}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" MinWidth="40" />
+
+        <TextBlock Text="Developer Command" Grid.Row="3" Grid.ColumnSpan="2" />
+        <CheckBox IsChecked="{Binding IsHex}" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center" ToolTip="Is Hex Command" />
+        <TextBox Text="{Binding DeveloperCommand, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.ColumnSpan="2">
+            <TextBox.InputBindings>
+                <KeyBinding Key="Return" Command="{Binding SendDeveloperCommand}" />
+            </TextBox.InputBindings>
+        </TextBox>
+        <Button Content="Send Dev. Command" Grid.Row="5" Grid.ColumnSpan="2" Command="{Binding SendDeveloperCommand}" />
+    </Grid>
+</UserControl>
