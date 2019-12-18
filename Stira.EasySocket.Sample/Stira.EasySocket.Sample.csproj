@@ -8,4 +8,7 @@
   <ItemGroup>
     <PackageReference Include="Prism.DryIoc" Version="7.2.0.1367" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stira.EasySocketControl\Stira.EasySocket.csproj" />
+  </ItemGroup>
 </Project>

@@ -5,12 +5,19 @@
     <UseWPF>true</UseWPF>
     <Authors>Touseef Elahi</Authors>
     <Company>Stira.sa</Company>
-    <Product>Stira.EasySocket</Product>
-    <Description>This gives WPF UI and implementation of Stira.Socket on top level.</Description>
+    <Product>Stira.EasySocket.WPF</Product>
+    <Description>
+      This gives WPF UI and implementation of Stira.Socket on top level.
+      For Help See sample here https://github.com/Touseefelahi/Stira.EasySocket.Wpf
+    </Description>
+    <PackageId>Stira.EasySocket.WPF</PackageId>
+    <RepositoryUrl>https://github.com/Touseefelahi/Stira.EasySocket.Wpf</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>Socket-WPF, Socket programming, TCP, UDP</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.Core" Version="7.2.0.1422" />
     <PackageReference Include="Stira.Socket" Version="1.0.3" />
   </ItemGroup>
 
