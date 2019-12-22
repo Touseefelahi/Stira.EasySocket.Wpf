@@ -25,13 +25,13 @@
         <TextBlock Text="Port TCP" Grid.Row="2" />
         <TextBox Text="{Binding Mcu.PortTcp}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" MinWidth="40" />
 
-        <TextBlock Text="Developer Command" Grid.Row="3" Grid.ColumnSpan="2" />
-        <CheckBox IsChecked="{Binding IsHex}" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center" ToolTip="Is Hex Command" />
-        <TextBox Text="{Binding DeveloperCommand, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.ColumnSpan="2">
+        <TextBlock x:Name="devCommandTextblock" Text="Developer Command" Grid.Row="3" Grid.ColumnSpan="2" />
+        <CheckBox  x:Name="devCommandHexCheckBox" IsChecked="{Binding IsHex}" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center" ToolTip="Is Hex Command" />
+        <TextBox  x:Name="devCommandTextbox"  Text="{Binding DeveloperCommand, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.ColumnSpan="2">
             <TextBox.InputBindings>
                 <KeyBinding Key="Return" Command="{Binding SendDeveloperCommand}" />
             </TextBox.InputBindings>
         </TextBox>
-        <Button Content="Send Dev. Command" Grid.Row="5" Grid.ColumnSpan="2" Command="{Binding SendDeveloperCommand}" />
+        <Button  x:Name="devCommandTextbutton" Content="Send Dev. Command" Grid.Row="5" Grid.ColumnSpan="2" Command="{Binding SendDeveloperCommand}" />
     </Grid>
 </UserControl>

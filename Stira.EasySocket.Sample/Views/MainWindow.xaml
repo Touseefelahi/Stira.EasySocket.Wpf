@@ -6,6 +6,6 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="350" Width="525">
     <Grid>
-        <socket:Control DataContext="{Binding SocketControl}" />
+        <socket:Control IsDeveloperControlVisible="True" DataContext="{Binding SocketControl}" />
     </Grid>
 </Window>

@@ -15,6 +15,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageTags>Socket-WPF, Socket programming, TCP, UDP</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
