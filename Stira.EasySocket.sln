@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stira.EasySocket", "Stira.EasySocketControl\Stira.EasySocket.csproj", "{F4CE7C2B-9843-4395-B2B2-7A3CB8AB28A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stira.EasySocket.Sample", "Stira.EasySocket.Sample\Stira.EasySocket.Sample.csproj", "{4D69460F-ECDA-4EBA-B61B-6DB7244616A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stira.EasySocket.Sample", "Stira.EasySocket.Sample\Stira.EasySocket.Sample.csproj", "{4D69460F-ECDA-4EBA-B61B-6DB7244616A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stira.Socket", "..\Stira.Socket\Stira.Socket\Stira.Socket.csproj", "{884CE278-167B-474E-B826-14EB5C4928D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4D69460F-ECDA-4EBA-B61B-6DB7244616A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D69460F-ECDA-4EBA-B61B-6DB7244616A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D69460F-ECDA-4EBA-B61B-6DB7244616A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884CE278-167B-474E-B826-14EB5C4928D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884CE278-167B-474E-B826-14EB5C4928D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884CE278-167B-474E-B826-14EB5C4928D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884CE278-167B-474E-B826-14EB5C4928D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,6 +14,7 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <TextBlock Text="IP" Grid.Row="0" />
@@ -32,6 +33,28 @@
                 <KeyBinding Key="Return" Command="{Binding SendDeveloperCommand}" />
             </TextBox.InputBindings>
         </TextBox>
-        <Button  x:Name="devCommandTextbutton" Content="Send Dev. Command" Grid.Row="5" Grid.ColumnSpan="2" Command="{Binding SendDeveloperCommand}" />
+        <Button  x:Name="devCommandTextbutton" Content="Send Dev.s Command" Grid.Row="5" Grid.ColumnSpan="2" Command="{Binding SendDeveloperCommand}" />
+
+        <Grid Grid.Row="6" Grid.ColumnSpan="2">
+            <ToggleButton x:Name="ShowServerSettings" Content="Show Server Settings" />
+            <Popup IsOpen="{Binding ElementName=ShowServerSettings, Path=IsChecked}" Placement="Top" PopupAnimation="Slide" AllowsTransparency="True">
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Tcp Port" Grid.Row="0" />
+                    <TextBox Text="{Binding ListenerTcp.Port}"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" MinWidth="90" />
+                    <Button  Content="Toggle Listner" Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding StartTcpListenerCommand}" />
+                    <TextBlock Text="{Binding ListenerTcp.IsListening}" Grid.Row="2" />
+                </Grid>
+            </Popup>
+        </Grid>
     </Grid>
 </UserControl>
