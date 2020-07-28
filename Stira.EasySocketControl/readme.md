@@ -1,7 +1,6 @@
 ﻿
 # Welcome to Easy Socket
-Easy socket is just an abstraction over the C# socket<br>
-Main advantage of this library is to use the events from the library<br>
+This is the UI Implementation of Easy Socket
 
 # Content
 + [How to use](https://github.com/Touseefelahi/EasySockets#How-To-Use)
