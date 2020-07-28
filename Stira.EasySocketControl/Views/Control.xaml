@@ -48,11 +48,57 @@
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
-                    <TextBlock Text="Tcp Port" Grid.Row="0" />
-                    <TextBox Text="{Binding ListenerTcp.Port}"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" MinWidth="90" />
-                    <Button  Content="Toggle Listner" Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding StartTcpListenerCommand}" />
-                    <TextBlock Text="{Binding ListenerTcp.IsListening}" Grid.Row="2" />
+
+                    <TextBlock Text="TCP Server" HorizontalAlignment="Center" Grid.ColumnSpan="2" />
+                    <TextBlock Text="Tcp Port" Grid.Row="1" />
+                    <TextBox Text="{Binding ListenerTcp.Port}"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" MinWidth="90" />
+                    <Button  Grid.Row="2" Grid.ColumnSpan="2" Command="{Binding StartTcpListenerCommand}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Content" Value="Connect"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ListenerTcp.IsListening}" Value="True">
+                                        <Setter Property="Content" Value="Stop Listener"></Setter>
+                                        <Setter Property="ToolTip" Value="Click to close the server"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ListenerTcp.IsListening}" Value="False">
+                                        <Setter Property="Content" Value="Start Listener"></Setter>
+                                        <Setter Property="ToolTip" Value="Click to start the server"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <TextBlock Text="TCP Client" HorizontalAlignment="Center" Grid.ColumnSpan="2"  Grid.Row="3" />
+                    <TextBlock Text="Server IP"  Grid.Row="4" />
+                    <TextBox Text="{Binding TcpClient.Ip}"  Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" MinWidth="90" />
+
+                    <TextBlock Text="Server Port"  Grid.Row="5" />
+                    <TextBox Text="{Binding TcpClient.Port}"  Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" MinWidth="90" />
+
+                    <Button  Grid.Row="6" Grid.ColumnSpan="3" Command="{Binding ConnectToTcpServerCommand}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Content" Value="Connect"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding TcpClient.IsConnected}" Value="True">
+                                        <Setter Property="Content" Value="Disconnect"></Setter>
+                                        <Setter Property="ToolTip" Value="Click to disconnect"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding TcpClient.IsConnected}" Value="False">
+                                        <Setter Property="Content" Value="Connect"></Setter>
+                                        <Setter Property="ToolTip" Value="Click to connect"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </Grid>
             </Popup>
         </Grid>

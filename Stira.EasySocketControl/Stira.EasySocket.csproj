@@ -15,7 +15,8 @@
     <RepositoryType>Git</RepositoryType>
     <PackageTags>Socket-WPF, Socket programming, TCP, UDP</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
+    <Version>1.2.0</Version>
+    <PackageReleaseNotes>Server settings now contains Tcp Client option</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.0|AnyCPU'">
@@ -27,6 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Stira.Socket" Version="1.1.1" />
+    <PackageReference Include="Stira.Socket" Version="1.2.0" />
   </ItemGroup>
 </Project>
